@@ -8,7 +8,7 @@ import com.techdew.library.CirclePercentageView;
 
 public class MainActivity extends AppCompatActivity {
     CirclePercentageView circlePercentView;
-    int value;
+    int val;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,13 +21,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-                for (value = 0; value <= 100; value++) {
+                for (val = 0; val <= 100; val++) {
                     Handler mainHandler = new Handler(getApplicationContext().getMainLooper());
                     mainHandler.post(new Runnable() {
                         @Override
                         public void run() {
 
-                            circlePercentView.setPercentage(value);
+                            circlePercentView.setPercentage(val);
 
                         }
                     });
